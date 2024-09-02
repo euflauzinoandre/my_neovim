@@ -1,0 +1,6 @@
+{
+  "snippets.ultisnips.pythonPrompt": false,
+  "languageserver": {
+          //Add your languagem server configuration options here
+  }
+}
