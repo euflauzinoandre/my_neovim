@@ -1,5 +1,5 @@
 call plug#begin()
-        Plug 'navarasu/onedark.nvim'
+        Plug 'sainnhe/sonokai'
         Plug 'vim-airline/vim-airline'
         Plug 'vim-airline/vim-airline-themes'
         Plug 'ryanoasis/vim-devicons'
@@ -57,16 +57,13 @@ if exists('+termguicolors')
         set termguicolors
 endif
 
-let g:onedark_config = {
-  \ 'style': 'deep',
-  \ 'toggle_style_key': '<leader>ts',
-  \ 'ending_tildes': v:true,
-  \ 'diagnostics': {
-    \ 'darker': v:false,
-    \ 'background': v:false,
-  \ },
-\ }
-colorscheme onedark
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
+let g:sonokai_disable_italic_comment = 0
+let g:sonokai_diagnostic_line_highlight = 1
+let g:sonokai_current_word = 'bold'
+let g:airline_theme = 'sonokai'
+colorscheme sonokai
 
 if (has("nvim")) "Transparent background. Only for nvim
         highlight Normal guibg=NONE ctermbg=NONE
